@@ -1,0 +1,57 @@
+version "3.7"
+services:
+    wordpress:
+        image: wordpress
+        restart: always
+        ports:
+          - 8080:80
+        environment:
+          WORDPRESS_DB_HOST: db
+          WORDPRESS_DB_USER: kerri
+          WORDPRESS_DB_PASSWORD: kerri
+          WORDPRESS_DB_NAME: wordpress
+        volumes:
+          - wordpress:/var/www/html
+        networks: 
+            - frontend
+            - backend
+    web:
+        build: './Apache'
+        depends_on:
+            - php
+            - mysql
+        ports: 
+            - "8000:80"     
+        networks: 
+            - frontend
+            - backend
+    php:
+        build: './Php'
+        networks: 
+            - backend
+    mysql:
+        image: mysql:8.0.19
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: kerri
+            MYSQL_PASSWORD: kerri
+            MYSQL_ROOT_PASSWORD: kerri
+        volumes:
+            - db:/var/lib/mysql
+        networks: 
+            - backend
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        depends_on: mysql
+        ports:
+            - 8001:80
+        environment:
+            MYSQL_USER: kerri
+            MYSQL_PASSWORD: kerri
+            MYSQL_ROOT_PASSWORD: kerri
+
+volumes:
+    wordpress:
+    db:
