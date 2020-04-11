@@ -1,8 +1,7 @@
-#https://hub.docker.com/_/httpd
+FROM httpd:2.4.43-alpine
 
 LABEL maintainer="czetsuya@gmail.com"
 
-FROM httpd:2.4.43-alpine
 RUN apk update; \
     apk upgrade;
 
