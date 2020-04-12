@@ -9,7 +9,7 @@ This project is a demonstration of how docker works. It's actually composed of 3
  - MariaDB, Apache, PHP
  - MariaDB, Wordpress
 
-* MariaDB instance is the same for the 3 sets.
+MariaDB instance is the same for the 3 sets.
 
 ## Requirements:
 
