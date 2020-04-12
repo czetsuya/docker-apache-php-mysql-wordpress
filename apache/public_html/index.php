@@ -8,7 +8,7 @@
     <h2>annyeongsayo</h2>
     
     <?php 
-    $host = 'mysql';
+    $host = 'db';
     $user = 'kerri';
     $pass = 'kerri';
     $conn = new mysqli($host, $user, $pass);

@@ -5,5 +5,7 @@ LABEL maintainer="czetsuya@gmail.com"
 RUN apk update; \
     apk upgrade;
 
-COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY local.apache.conf /usr/local/apache2/conf/local.apache.conf
 
+RUN echo "Include /usr/local/apache2/conf/local.apache.conf" \
+    >> /usr/local/apache2/conf/httpd.conf

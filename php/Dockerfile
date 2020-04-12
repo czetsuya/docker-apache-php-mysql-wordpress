@@ -1,6 +1,6 @@
-FROM php:7.2-zts-alpine3.10
+FROM php:7.2-fpm-alpine3.11
 
-LABEL maintainer="czetsuya@gmail.com"
+LABEL maintainer="czetsuya@gmail.com"i
 
 RUN apk update; \
     apk upgrade;
