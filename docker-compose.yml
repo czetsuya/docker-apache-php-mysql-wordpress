@@ -46,8 +46,6 @@ services:
             - backend
     php:
         build: './php/'
-        depends_on:
-            - db
         networks: 
             - backend
         volumes:
