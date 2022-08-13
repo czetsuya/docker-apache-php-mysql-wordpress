@@ -1,6 +1,6 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 # Docker Apache, PHP, MySQL and Wordpress
+
+Blog: https://www.czetsuyatech.com/2020/04/docker-compose-with-apache-php-mysql-wordpress.html
 
 This project is a demonstration of how docker works. It's actually composed of 3 sets of services:
 
@@ -47,7 +47,3 @@ And the following URLs should be available:
  - Phpmyadmin - http://localhost:8002
  - Apache - http://localhost:8000
  - Wordpress - http://localhost:8080
-
-## Authors
-
- * **Edward P. Legaspi** - *Java Architect* - [czetsuya](https://github.com/czetsuya)
